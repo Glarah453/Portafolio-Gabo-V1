@@ -128,7 +128,9 @@ const projects = [
   },
 ];
 
-export default function PortfolioHome() {
+export default function PortfolioHome({
+  currentYear,
+}: PortfolioHomeProps) {
   const [language, setLanguage] = useState<Language>("es");
   const [menuOpen, setMenuOpen] = useState(false);
 
