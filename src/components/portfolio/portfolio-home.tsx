@@ -418,7 +418,8 @@ export default function PortfolioHome({
       {/* Footer */}
       <footer className="border-t border-border px-6 py-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs text-muted sm:flex-row">
-          <span>© {new Date().getFullYear()} Gabriel Lara Hormazábal.</span>
+          {/* <span>© {new Date().getFullYear()} Gabriel Lara Hormazábal.</span> */}
+          <span>© {currentYear} Gabriel Lara Hormazábal.</span>
           <span>{t.footer}</span>
         </div>
       </footer>
