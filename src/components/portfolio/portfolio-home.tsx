@@ -4,6 +4,11 @@
 
 import { useState } from "react";
 
+
+interface PortfolioHomeProps {
+  currentYear: number;
+}
+
 type Language = "es" | "en";
 
 const content = {
