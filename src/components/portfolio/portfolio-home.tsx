@@ -19,6 +19,7 @@ const content = {
       { label: "Sobre mí", href: "#about" },
       { label: "Habilidades", href: "#skills" },
       { label: "Proyectos", href: "#projects" },
+      { label: "Publicaciones", href: "#publications" },
       { label: "Contacto", href: "#contact" },
     ],
     availability: "Disponible para oportunidades",
@@ -40,7 +41,11 @@ const content = {
     projectsTitle: "Proyectos destacados",
     projectsDescription:
       "Una selección de proyectos donde combino investigación, desarrollo de software y ciencia de datos.",
-    contactLabel: "04 / CONTACTO",
+    publicationsLabel: "04 / PUBLICACIONES",
+    publicationsTitle: "Investigación y publicaciones científicas",
+    publicationsDescription:
+      "Contribuciones a investigaciones científicas que integran aprendizaje automático, química computacional y análisis de interacciones proteína-ligando.",
+    contactLabel: "05 / CONTACTO",
     contactTitle: "Construyamos algo interesante.",
     contactDescription:
       "Estoy abierto a oportunidades laborales, colaboraciones y proyectos relacionados con tecnología, datos e inteligencia artificial.",
