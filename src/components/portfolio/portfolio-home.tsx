@@ -496,6 +496,78 @@ export default function PortfolioHome({
         </div>
       </section>
 
+      {/* Publications */}
+      <section
+        id="publications"
+        className="border-t border-border bg-surface/40 px-6 py-28 lg:px-10"
+      >
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-5 text-xs font-semibold tracking-[0.25em] text-accent-highlight">
+            {t.publicationsLabel}
+          </p>
+
+          <h2 className="max-w-3xl text-4xl font-bold sm:text-5xl">
+            {t.publicationsTitle}
+          </h2>
+
+          <p className="mt-5 max-w-2xl leading-8 text-muted">
+            {t.publicationsDescription}
+          </p>
+
+          <div className="mt-14 space-y-5">
+            {publications.map((publication) => (
+              <article
+                key={publication.number}
+                className="group rounded-xl border border-border bg-surface p-7 transition-all duration-300 hover:border-accent/60 md:p-9"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <span className="text-sm font-semibold text-accent-highlight">
+                    PUBLICATION {publication.number}
+                  </span>
+
+                  <span className="rounded-md border border-border bg-background px-3 py-1.5 text-xs font-semibold text-muted">
+                    {publication.year}
+                  </span>
+                </div>
+
+                <h3 className="mt-7 max-w-5xl text-xl font-bold leading-relaxed transition-colors group-hover:text-rose-200 md:text-2xl">
+                  {publication.title}
+                </h3>
+
+                <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-muted">
+                  <span className="font-medium text-white">
+                    {publication.journal}
+                  </span>
+                  <span className="text-accent-highlight">·</span>
+                  <span>{publication.volume}</span>
+                </div>
+
+                <div className="mt-7 border-l-2 border-accent pl-5">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-highlight">
+                    {language === "es"
+                      ? "Mi contribución"
+                      : "My contribution"}
+                  </p>
+
+                  <p className="max-w-4xl text-sm leading-7 text-muted">
+                    {publication.contribution[language]}
+                  </p>
+                </div>
+
+                <a
+                  href={publication.doi}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-rose-200 transition-colors hover:text-accent-highlight"
+                >
+                  View publication <span>↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section
         id="contact"
