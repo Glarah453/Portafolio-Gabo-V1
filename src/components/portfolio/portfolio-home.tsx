@@ -155,6 +155,37 @@ const projects = [
   },
 ];
 
+
+const publications = [
+  {
+    number: "01",
+    year: "2025",
+    journal: "International Journal of Molecular Sciences",
+    volume: "26(5), 2302",
+    title:
+      "Insight into the Relationships Between Chemical, Protein and Functional Variables in the PBP/GOBP Family in Moths Based on Machine Learning",
+    contribution: {
+      es: "Contribución al desarrollo de modelos de aprendizaje automático, análisis de datos químicos, optimización de hiperparámetros y visualización de resultados.",
+      en: "Contributed to machine learning model development, chemical data analysis, hyperparameter optimization and results visualization.",
+    },
+    doi: "https://doi.org/10.3390/ijms26052302",
+  },
+  {
+    number: "02",
+    year: "2026",
+    journal: "Computational Biology and Chemistry",
+    volume: "120, Part 1, 108794",
+    title:
+      "Accelerating VOC-OBP interaction screening via machine learning and molecular docking: Towards semiochemicals discovery for moth pests",
+    contribution: {
+      es: "Contribución al análisis de datos, caracterización química, validación de resultados y procesamiento de información experimental.",
+      en: "Contributed to data analysis, chemical characterization, results validation and experimental data processing.",
+    },
+    doi: "https://doi.org/10.1016/j.compbiolchem.2025.108794",
+  },
+];
+
+
 export default function PortfolioHome({
   currentYear,
 }: PortfolioHomeProps) {
