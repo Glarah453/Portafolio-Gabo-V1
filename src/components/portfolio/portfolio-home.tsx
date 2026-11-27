@@ -115,27 +115,43 @@ const skillGroups = [
 const projects = [
   {
     number: "01",
-    category: "Scientific Machine Learning",
-    title: "Ki Prediction Platform",
-    description:
-      "Plataforma de aprendizaje automático para predecir afinidades de interacción entre proteínas odorantes y compuestos orgánicos volátiles.",
-    technologies: ["Python", "LightGBM", "XGBoost", "FastAPI"],
+    category: "Data Science & Customer Analytics",
+    title: "Customer Intelligence",
+    image: "/images/projects/customer-intelligence.png",
+    description: {
+      es: "Plataforma de inteligencia de clientes que integra segmentación RFM, clustering K-Means, análisis de cohortes, Customer Lifetime Value (CLV) y análisis de Churn.",
+      en: "Customer intelligence platform integrating RFM segmentation, K-Means clustering, cohort analysis, Customer Lifetime Value (CLV) and Churn analysis.",
+    },
+    technologies: ["Python", "Machine Learning", "RFM", "K-Means", "Next.js"],
+    demoUrl: "https://customer-intelligence-sigma.vercel.app/",
+    githubUrl: "https://github.com/Glarah453/customer-intelligence",
   },
   {
     number: "02",
-    category: "Data Science & Trading",
-    title: "Crypto Trading Bot",
-    description:
-      "Sistema experimental de análisis de mercados de criptomonedas mediante datos históricos, indicadores técnicos y análisis de sentimiento.",
-    technologies: ["Python", "Machine Learning", "NLP", "SQL"],
+    category: "Full Stack Development",
+    title: "Acme – Financial Dashboard",
+    image: "/images/projects/acme-dashboard.png",
+    description: {
+      es: "Dashboard financiero desarrollado para visualizar información empresarial mediante indicadores y componentes de análisis de datos.",
+      en: "Financial dashboard developed to visualize business information through key indicators and data analysis components.",
+    },
+    technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    demoUrl:
+      "https://extreme-routes-1fudgqf7c-gabriel-laras-projects-3e146784.vercel.app/",
+    githubUrl: "https://github.com/Glarah453/extreme-routes",
   },
   {
     number: "03",
-    category: "AI & Full Stack Development",
-    title: "Scientific Research Agent",
-    description:
-      "Sistema orientado a la investigación científica que integra recuperación de información, modelos de lenguaje y procesamiento de documentos.",
-    technologies: ["Python", "RAG", "LLM", "Next.js"],
+    category: "Scientific Machine Learning",
+    title: "MolPAI – Molecular Affinity Prediction",
+    image: "/images/projects/molpai.png",
+    description: {
+      es: "Plataforma web de aprendizaje automático orientada a predecir la afinidad de interacción entre proteínas odorantes y compuestos orgánicos volátiles, apoyando la investigación y el descubrimiento de semioquímicos.",
+      en: "Machine learning web platform designed to predict binding affinity between odorant-binding proteins and volatile organic compounds, supporting research and semiochemical discovery.",
+    },
+    technologies: ["Python", "XGBoost", "LightGBM", "FastAPI", "PostgreSQL"],
+    demoUrl: "",
+    githubUrl: "",
   },
 ];
 
