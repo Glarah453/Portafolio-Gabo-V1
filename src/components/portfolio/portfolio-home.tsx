@@ -57,6 +57,7 @@ const content = {
       { label: "About", href: "#about" },
       { label: "Skills", href: "#skills" },
       { label: "Projects", href: "#projects" },
+      { label: "Publications", href: "#publications" },
       { label: "Contact", href: "#contact" },
     ],
     availability: "Open to opportunities",
@@ -78,7 +79,11 @@ const content = {
     projectsTitle: "Featured projects",
     projectsDescription:
       "A selection of projects combining research, software development and data science.",
-    contactLabel: "04 / CONTACT",
+    publicationsLabel: "04 / PUBLICATIONS",
+    publicationsTitle: "Scientific research and publications",
+    publicationsDescription:
+      "Contributions to scientific research integrating machine learning, computational chemistry and protein-ligand interaction analysis.",
+    contactLabel: "05 / CONTACT",
     contactTitle: "Let's build something interesting.",
     contactDescription:
       "I am open to job opportunities, collaborations and projects related to technology, data and artificial intelligence.",
