@@ -395,7 +395,10 @@ export default function PortfolioHome({
       </section>
 
       {/* Projects */}
-      <section id="projects" className="border-t border-border px-6 py-28 lg:px-10">
+      <section
+        id="projects"
+        className="border-t border-border px-6 py-28 lg:px-10"
+      >
         <div className="mx-auto max-w-7xl">
           <p className="mb-5 text-xs font-semibold tracking-[0.25em] text-accent-highlight">
             {t.projectsLabel}
@@ -409,43 +412,83 @@ export default function PortfolioHome({
             {t.projectsDescription}
           </p>
 
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          <div className="mt-14 grid gap-7 lg:grid-cols-2">
             {projects.map((project) => (
               <article
                 key={project.number}
-                className="group rounded-xl border border-border bg-surface p-7 transition-all hover:-translate-y-1 hover:border-accent/60"
+                className="group overflow-hidden rounded-xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent/60"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-accent-highlight">
-                    {project.number}
-                  </span>
+                <div className="relative aspect-video overflow-hidden bg-background">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
 
-                  <span className="text-xl text-muted transition-colors group-hover:text-accent-highlight">
-                    ↗
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+
+                  <span className="absolute left-5 top-5 rounded-md border border-white/10 bg-background/80 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+                    {project.number}
                   </span>
                 </div>
 
-                <p className="mt-10 text-xs font-medium uppercase tracking-wide text-accent-highlight">
-                  {project.category}
-                </p>
+                <div className="p-7">
+                  <p className="text-xs font-medium uppercase tracking-wide text-accent-highlight">
+                    {project.category}
+                  </p>
 
-                <h3 className="mt-3 text-2xl font-bold">
-                  {project.title}
-                </h3>
+                  <h3 className="mt-3 text-2xl font-bold">
+                    {project.title}
+                  </h3>
 
-                <p className="mt-5 min-h-28 text-sm leading-7 text-muted">
-                  {project.description}
-                </p>
+                  <p className="mt-5 min-h-24 text-sm leading-7 text-muted">
+                    {project.description[language]}
+                  </p>
 
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {project.technologies.map((technology) => (
-                    <span
-                      key={technology}
-                      className="rounded-md bg-background px-2.5 py-1.5 text-xs text-muted"
-                    >
-                      {technology}
-                    </span>
-                  ))}
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.technologies.map((technology) => (
+                      <span
+                        key={technology}
+                        className="rounded-md border border-border bg-background px-2.5 py-1.5 text-xs text-muted"
+                      >
+                        {technology}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg bg-accent px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-accent-highlight"
+                      >
+                        Live Demo ↗
+                      </a>
+                    )}
+
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg border border-border px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:border-accent-highlight"
+                      >
+                        GitHub ↗
+                      </a>
+                    )}
+
+                    {!project.demoUrl && !project.githubUrl && (
+                      <span className="rounded-lg border border-accent/30 bg-accent/10 px-4 py-2.5 text-xs font-medium text-rose-200">
+                        {language === "es"
+                          ? "Proyecto de investigación"
+                          : "Research project"}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
